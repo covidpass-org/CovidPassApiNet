@@ -34,10 +34,10 @@ namespace CovidPass_API.Controllers
             var manifest = new Manifest
             {
                 PassJsonHash = signPass.PassJsonHash,
-                IconHash = _hashOptions.Value.Icon,
-                Icon2XHash = _hashOptions.Value.Icon2X,
-                LogoHash = _hashOptions.Value.Logo,
-                Logo2XHash = _hashOptions.Value.Logo2X
+                IconHash = signPass.UseBlackVersion ? _hashOptions.Value.IconBlack : _hashOptions.Value.IconWhite,
+                Icon2XHash = signPass.UseBlackVersion ? _hashOptions.Value.Icon2XBlack : _hashOptions.Value.Icon2XWhite,
+                LogoHash = signPass.UseBlackVersion ? _hashOptions.Value.LogoBlack : _hashOptions.Value.LogoWhite,
+                Logo2XHash = signPass.UseBlackVersion ? _hashOptions.Value.Logo2XBlack : _hashOptions.Value.Logo2XWhite
             };
 
             // Sign the manifest and get the signature

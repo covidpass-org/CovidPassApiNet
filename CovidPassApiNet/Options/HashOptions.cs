@@ -7,9 +7,13 @@ namespace CovidPass_API.Options
     {
         public const string Key = "Hashes";
 
-        [Required] public string Icon { get; set; }
-        [Required] public string Icon2X { get; set; }
-        [Required] public string Logo { get; set; }
-        [Required] public string Logo2X { get; set; }
+        [Required] public string IconBlack { get; set; }
+        [Required] public string IconWhite { get; set; }
+        [Required] public string Icon2XBlack { get; set; }
+        [Required] public string Icon2XWhite { get; set; }
+        [Required] public string LogoBlack { get; set; }
+        [Required] public string LogoWhite { get; set; }
+        [Required] public string Logo2XBlack { get; set; }
+        [Required] public string Logo2XWhite { get; set; }
     }
 }
